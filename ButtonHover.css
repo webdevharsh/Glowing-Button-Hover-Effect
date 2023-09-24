@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+margin:0;   
+padding:0;
+box-sizing:border-box;
+}   
+
+body{
+background:#131418; 
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+font-family: 'poppins', sans-serif;
+}
+
+a{
+position:relative;  
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+text-transform:uppercase;
+color:#FF69B4;
+padding:20px;
+border:1px solid #FF69B4;
+height:65px;
+width:200px;
+font-size:22px;
+letter-spacing:4px;
+overflow:hidden;
+z-index:1;
+transition:color 1s,box-shadow 1s;
+transition-delay:0s,1s;
+cursor:pointer;
+}
+
+a:hover{
+color:white;  
+box-shadow:0 0 5px #FF69B4,
+           0 0 10px #FF69B4, 
+           0 0 20px #FF69B4, 
+           0 0 40px #FF69B4, 
+           0 0 80px #FF69B4;
+}
+
+a::before{
+content:"";       
+height:65px;
+width:0px;
+transform:skew(35deg);
+position:absolute;
+left:-65px;
+background:#FF69B4;
+transition:all 1s;
+z-index:-1;
+}
+
+a:hover::before{
+width:200px;        
+}
